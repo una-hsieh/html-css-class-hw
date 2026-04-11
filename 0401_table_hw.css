@@ -1,0 +1,78 @@
+/* 表格基本設定 */
+table{
+    border-collapse: collapse;
+    font-family: STKaiti,Arial, Helvetica, sans-serif
+}
+
+th, td{
+    border: black, 1px, solid;
+    padding: 5px;
+    height: 45px;
+
+    /* 表格內文字水平置中 */
+    text-align: center; 
+    letter-spacing: 0.8px
+
+}
+
+
+/* 標頭時間星期-斜線 */
+.slash{
+    position: relative;
+    width: 100px; 
+    height: 45px; 
+    border: 1px solid black;
+
+    background: linear-gradient(to bottom left, 
+                transparent calc(50% - 0.5px), 
+                black, 
+                transparent calc(50% + 0.5px));
+}
+
+.top-text {
+    position: absolute;
+    top: 5px; 
+    right: 10px;
+}
+
+.bottom-text{
+    position: absolute;
+    top: 30px; 
+    right: 65px;
+}
+
+
+/* 文字垂直 */
+.vertical-text{
+    writing-mode: vertical-rl;
+}
+
+
+/* 粗體字 */
+.bold-text {
+    font-weight: bolder; 
+}
+
+
+/* 時間-字級 */
+.time-fontsize{
+    font-size: 13px;
+}
+
+
+/* 授課老師-字級&行高 */
+.teacher-fontsize{
+    font-size: 15px;
+    line-height: 20px;
+}
+
+/* 課間活動-字距 */
+.breaktime-letterspace{
+    letter-spacing: 30px
+}
+
+
+/* 學科-欄寬 */
+.subject-width{
+    width: 75px;
+}
