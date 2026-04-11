@@ -1,0 +1,88 @@
+html {
+    background-color: #f0ebf8;
+}
+
+form {
+    width: 640px;
+    margin: 0px auto;
+    color: #1f1f1f;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid gray;
+    line-height: 16px;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(103, 58, 183);
+}
+
+input::placeholder {
+    font-size: 14px;
+    color: gray;
+}
+
+.top-area {
+    background-color: #ffffff;
+    border-left: 0.5px solid gray;
+    border-top: 10px solid rgb(103, 58, 183);
+    border-radius: 5px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 24px;
+    width: 590px;
+}
+
+.question-area {
+    background-color: #ffffff;
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    padding: 24px;
+    width: 590px;
+}
+
+.button-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 590px;
+    font-size: 14px;
+}
+
+.submit-button {
+    background-color:rgb(103, 58, 183);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    width: 76.5px; height: 36px;
+}
+
+.reset-button {
+    border: none;
+    border-radius: 3px;
+    color: rgb(103, 58, 183);
+    cursor: pointer;
+    width: 76.5px; height: 36px;
+}
+
+.bottom-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    opacity: .55;
+    margin-bottom: 16px;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form homework</title>
+    <link rel="shortcut icon" sizes="16x16" href="https://ssl.gstatic.com/docs/spreadsheets/forms/favicon_qp2.png">    
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="0410_form_hw.css">
+
+</head>
+<body>
+    <form action="">
+        <div class="top-area">
+            <h2>F2E02 表單練習</h2>
+            <br>
+            <p>僅供新尖兵 F2E02 表單切版練習作業</p>
+        </div>
+
+        <div class="question-area">
+            <p>姓名</p>
+            <input type="text" 
+            placeholder="您的回答" name="Q1-name" required>
+        </div>
+
+        <div class="question-area">
+            <p>信箱</p>
+            <input type="text" 
+            placeholder="您的回答" name="Q2-mail" required>
+        </div>
+
+        <div class="question-area">
+            <p>生日</p>
+            <input type="date" 
+            name="Q3-bday">
+        </div>
+
+        <div class="question-area">
+            <p>想跟老師說悄悄話</p>
+            <input type="text" 
+            placeholder="您的回答" name="Q4">
+        </div>
+
+        <div class="question-area">
+            <p>喜歡的顏色</p>
+            <input type="radio" name="Q5-color" id=yellow>
+            <label for="yellow">黃</label>
+            <br>
+            <input type="radio" name="Q5-color" id="green">
+            <label for="green">綠</label>
+            <br>
+            <input type="radio" name="Q5-color" id="red">
+            <label for="red">紅</label>
+        </div>
+
+        <div class="question-area">
+            <p>喜歡吃的飲食類型</p>
+            <input type="checkbox" name="Q6-cuisine" id="cn">
+            <label for="cn">中式</label>
+            <br>
+            <input type="checkbox" name="Q6-cuisine" id="it">
+            <label for="it">義式</label>
+            <br>
+            <input type="checkbox" name="Q6-cuisine" id="jp">
+            <label for="jp">日式</label>
+            <br>
+            <input type="checkbox" name="Q6-cuisine" id="kr">
+            <label for="kr">韓式</label>
+            <br>
+            <input type="checkbox" name="Q6-cuisine" id="us">
+            <label for="us">美式</label>
+            <br>
+            <input type="checkbox" name="Q6-cuisine" id="th">
+            <label for="th">泰式</label>
+            <br>
+        </div>
+
+        <div class="question-area">
+            <p>最想去的國家</p>
+            <select name="Q7-country">
+                <option selected disabled>選擇</option>
+                <optgroup label="亞洲">
+                    <option value="jp">日本</option>
+                    <option value="kr">韓國</option>
+                    <option value="th">泰國</option>
+                </optgroup>
+                <optgroup label="歐洲">
+                    <option value="de">德國</option>
+                    <option value="uk">英國</option>
+                </optgroup>
+                <optgroup label="美洲">
+                <option value="cn">加拿大</option>
+                <option value="us">美國</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div class="button-area"> 
+            <button class="submit-button" type="submit">提交</button>
+            <button class="reset-button" type="reset">清除表單</button>
+        </div>
+
+        <br>
+        <div class="bottom-area">
+            <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_dark_clr_74x24px.svg" alt="google logo">
+            &nbsp;
+            <span>表單</span>
+        </div>
+
+    </form>
+
+</body>
+</html>
