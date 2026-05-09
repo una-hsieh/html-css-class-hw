@@ -1,0 +1,503 @@
+:root {
+    font-family: Gudea, Heiti, 微軟正黑體, Microsoft JhengHei;
+
+    --green-dark: #0c9251;
+    --green-base: #11d073;
+    --yellow: #fab617;
+    --orange:#ff8b00;
+    --font:#222222;
+}
+
+section {
+    width: 1140px;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--font);
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.title:before {
+    content: "";
+    width: 40px;
+    height: 40px;
+
+    background: var(--yellow);
+
+    position: absolute;
+    left: 10px;
+    top: 0px;
+
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    z-index: -1;
+}
+
+.title2:before {
+    content: "";
+    width: 18px;
+    height: 18px;
+
+    background: var(--green-base);
+
+    position: absolute;
+    left: 10px;
+    top: 0px;
+
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    z-index: -1;
+}
+
+
+/* 焦點話題 */
+.topic {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* left side */
+.left-side {
+    width: 726px;
+    height: 330px;
+
+    display: grid;
+    column-gap: 18px;
+    row-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "main  us  cruise"
+    "main  us  penghu"
+    "main tokyo penghu"
+}
+
+.main { grid-area: main; }
+
+.us { grid-area: us; }
+
+.tokyo { grid-area: tokyo; }
+
+.cruise { grid-area: cruise; }
+
+.penghu { grid-area: penghu; }
+
+.grid-item {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.grid-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.topic .card-title {
+    display: block;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #fff;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    z-index: 1;
+}
+
+/* right side */
+.right-side {
+    width: 355px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 16.5px;
+}
+
+.list-item:hover .list-txt{
+    background: #fff;
+    color: var(--green-dark);
+    transition: all;
+    transition-duration: 0.8s;
+}
+
+.list-item:hover {
+    border-radius: 10px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+    transition: all;
+    transition-duration: 0.8s;
+}
+
+.list-content {
+    display: flex;
+    justify-content: space-between;
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.list-txt {
+    display: inline-block;
+    width: 245px;
+    height: 70px;
+    background: #fafafa;
+    padding: 10px;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
+}
+
+.list-img {
+    width: 110px;
+    height: 70px;
+}
+
+
+/* 日本跟團 */
+.tab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tab-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 720px;
+    padding-right: 25px;
+    cursor: pointer;
+}
+
+.tab-item {
+    color: #222;
+    font-size: 18px;
+}
+
+.tab-item.active {
+    color: var(--green-dark);
+    font-weight: 700;
+    border-bottom: #11d073 solid 3px;
+    padding-bottom: 2.5px;
+}
+
+.tab-item:hover {
+    color: var(--green-dark);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: grid;
+}
+
+#recommend, #hokuriku, #hokkaido, #tohoku, #tokyo, #kansai, #kyushu, #shikoku, #okinawa, #kaohsiung {
+    margin: 20px;
+    height: 395px;
+
+    column-gap: 18px;
+    row-gap: 15px;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "summer  weekly spring"
+    "summer reached select"
+}
+
+.summer { grid-area: summer; }
+.weekly { grid-area: weekly; }
+.reached { grid-area: reached; }
+.spring { grid-area: spring; }
+.select { grid-area: select; }
+
+.japan .card-title, .japan .description {
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+.japan .card-title {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #fff;
+    left: 10px;
+    bottom: 36px;
+}
+
+.japan .description {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+
+    padding: 0 10px 0 10px;
+    bottom: 10px;
+}
+
+.japan .description p {
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.japan .price span {
+    color: var(--yellow);
+    font-size: 18px;
+    font-weight: 900;
+    padding-right: 5px;
+}
+
+.japan .price p {
+    font-size: 14px;
+}
+
+
+/* 自遊最夯 */
+/* left side */
+.self-guided-trip {
+    display: flex;
+    justify-content: space-between;
+    height: 562px;
+}
+
+.promo-side {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.search {
+    margin: 0 20px;
+}
+
+.search h4 {
+    color: var(--font);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 25px 0 10px 0;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px; 
+}
+
+.links-grid a:hover {
+    color: var(--green-dark);
+    transition: all;
+    transition-duration: 0.8s;
+}
+
+.links-grid a {
+    color: var(--font);
+    font-size: 14px;
+}
+
+.links-grid .full-width {
+    grid-column: span 2;
+}
+
+.swipe-pic {
+    width: 100%;
+    height: 188px;
+    margin: 0 20px;
+}
+
+/* right side */
+.country {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.country .tab-menu {
+    width: 820px;
+    justify-content: left;
+}
+
+.country .tab-item {
+    margin-right: 28px;
+}
+
+.country .recommend-btn {
+    width: 84px;
+    height: 31px;
+    border-radius: 3px;
+    color: #fff;
+    background-color: var(--green-base);
+    cursor: pointer;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.card-content {
+    display: flex;
+
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-item:hover .card-txt{
+    color: var(--green-dark);
+    transition: all;
+    transition-duration: 0.8s;
+}
+
+.card-item:hover {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px 0 #0000001a;
+    transition: all;
+    transition-duration: 0.8s;
+}
+
+.country .card-title {
+    font-size: 16px;
+    font-weight: bolder;
+    color: #fff;
+    position: absolute;
+    left: 12px;
+    bottom: 6px;
+    z-index: 2;
+}
+
+.country .description {
+    width: 235px;
+    height: 120px;
+    background: #fafafa;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+    position: relative;
+}
+
+.country .card-txt {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--font);
+    position: absolute;
+    top : 10px;
+    left: 10px;
+}
+
+.country .price {
+    position: absolute;
+    bottom : 10px;
+    right: 10px;
+}
+
+
+.country .price span {
+    color: var(--orange);
+    font-size: 18px;
+    font-weight: bolder;
+    padding-right: 5px;
+}
+
+.country .price p {
+    font-size: 14px;
+}
+
+.country .card-img {
+    width: 165px;
+    height: 120px;
+}
+
+.country .card-img-wrap {
+    position: relative;
+}
+
+.country .card-img-wrap::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+
+/* 覆蓋層 */
+.app-fixed:hover {
+    scale: 1.4;
+}
+
+.app-content {
+    margin: 5px;
+    position: relative;
+}
+
+.app-fixed {
+    z-index: 9;
+}
+
+.app-fixed img {
+    width: 70px;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+.app-fixed {
+    width: 80px;
+    height: 150px;
+    background-color: var(--green-base);
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: top;
+
+    position: fixed;
+    left: 10px;
+    bottom: 20px;
+    transform-origin: left bottom;
+    transition: all;
+    transition-duration: 0.3s;
+}
+
+.white-bg {
+    width: 70px;
+    height: 130px;
+    background: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.customer-fixed {
+    width: 110px;
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    z-index: 10;
+}

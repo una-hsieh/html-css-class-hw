@@ -648,9 +648,18 @@ form div:last-child p {
   width: 1200px;
   height: 60px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   line-height: 60px;
   color: #9ea6b7;
   font-weight: 350;
+}
+
+.copyright-social-media i {
+  padding-right: 10px;
+  height: 21px;
 }
 
 .copyright-content a:hover {
